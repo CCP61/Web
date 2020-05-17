@@ -1,0 +1,149 @@
+<!--
+    SOLDOKU - Solucionador de Sudokus
+-->
+<!doctype html> 
+<html lang="ca" /> 
+<head>    
+    <meta charset="UTF-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Soluciona Sudoku" /> 
+    <meta name="keywords" content="Sudoku" /> 
+    <meta name="author" content="Carlos 2020" /> 
+    <link rel=stylesheet href="soldoku.css"/>  
+    <link rel="shortcut icon" href="soldoku.ico"/> 
+    <script src="soldoku.js"></script>      
+    <title>SOLDOKU</title> 
+</head>
+<body>
+    <!-- Capçalera amb imatge --> 
+    <header>
+        <svg width="300px" height="300px">  
+            <circle cx="150" cy="150" r="100" stroke="green" stroke-width="10" fill="lightblue" />
+            <text font-size="30px" x="75" y="160">SOLDOKU</text>
+        </svg>
+    </header>
+    <!-- Taula Sudoku --> 
+    <main>
+        <div id="accions">
+            <button id="xu">Xifra única?</button>
+            <button id="par">Parelles?</button>            
+        </div>
+        <div id="sudoku"> 
+            <table>   
+                <tr class="f0">   
+                    <td class="f0, c0"><button id="bt00" >123456789</button></td>
+                    <td class="f0, c1"><button id="bt01" >123456789</button></td>
+                    <td class="f0, c2"><button id="bt02" >123456789</button></td>
+                    <td class="f0, c3"><button id="bt03" >123456789</button></td>
+                    <td class="f0, c4"><button id="bt04" >123456789</button></td>
+                    <td class="f0, c5"><button id="bt05" >123456789</button></td>
+                    <td class="f0, c6"><button id="bt06" >123456789</button></td>
+                    <td class="f0, c7"><button id="bt07" >123456789</button></td>
+                    <td class="f0, c8"><button id="bt08" >123456789</button></td>
+                </tr>
+                <tr class="f1">   
+                    <td class="f1, c0"><button id="bt10" >123456789</button></td>
+                    <td class="f1, c1"><button id="bt11" >123456789</button></td>
+                    <td class="f1, c2"><button id="bt12" >123456789</button></td>
+                    <td class="f1, c3"><button id="bt13" >123456789</button></td>
+                    <td class="f1, c4"><button id="bt14" >123456789</button></td>
+                    <td class="f1, c5"><button id="bt15" >123456789</button></td>
+                    <td class="f1, c6"><button id="bt16" >123456789</button></td>
+                    <td class="f1, c7"><button id="bt17" >123456789</button></td>
+                    <td class="f1, c8"><button id="bt18" >123456789</button></td>
+                </tr>
+                <tr class="f2">   
+                    <td class="f2, c0"><button id="bt20" >123456789</button></td>
+                    <td class="f2, c1"><button id="bt21" >123456789</button></td>
+                    <td class="f2, c2"><button id="bt22" >123456789</button></td>
+                    <td class="f2, c3"><button id="bt23" >123456789</button></td>
+                    <td class="f2, c4"><button id="bt24" >123456789</button></td>
+                    <td class="f2, c5"><button id="bt25" >123456789</button></td>
+                    <td class="f2, c6"><button id="bt26" >123456789</button></td>
+                    <td class="f2, c7"><button id="bt27" >123456789</button></td>
+                    <td class="f2, c8"><button id="bt28" >123456789</button></td>
+                </tr>
+                <tr class="f3">   
+                    <td class="f3, c0"><button id="bt30" >123456789</button></td>
+                    <td class="f3, c1"><button id="bt31" >123456789</button></td>
+                    <td class="f3, c2"><button id="bt32" >123456789</button></td>
+                    <td class="f3, c3"><button id="bt33" >123456789</button></td>
+                    <td class="f3, c4"><button id="bt34" >123456789</button></td>
+                    <td class="f3, c5"><button id="bt35" >123456789</button></td>
+                    <td class="f3, c6"><button id="bt36" >123456789</button></td>
+                    <td class="f3, c7"><button id="bt37" >123456789</button></td>
+                    <td class="f3, c8"><button id="bt38" >123456789</button></td>
+                </tr>
+                <tr class="f4">   
+                    <td class="f4, c0"><button id="bt40" >123456789</button></td>
+                    <td class="f4, c1"><button id="bt41" >123456789</button></td>
+                    <td class="f4, c2"><button id="bt42" >123456789</button></td>
+                    <td class="f4, c3"><button id="bt43" >123456789</button></td>
+                    <td class="f4, c4"><button id="bt44" >123456789</button></td>
+                    <td class="f4, c5"><button id="bt45" >123456789</button></td>
+                    <td class="f4, c6"><button id="bt46" >123456789</button></td>
+                    <td class="f4, c7"><button id="bt47" >123456789</button></td>
+                    <td class="f4, c8"><button id="bt48" >123456789</button></td>
+                </tr>
+                <tr class="f5">   
+                    <td class="f5, c0"><button id="bt50" >123456789</button></td>
+                    <td class="f5, c1"><button id="bt51" >123456789</button></td>
+                    <td class="f5, c2"><button id="bt52" >123456789</button></td>
+                    <td class="f5, c3"><button id="bt53" >123456789</button></td>
+                    <td class="f5, c4"><button id="bt54" >123456789</button></td>
+                    <td class="f5, c5"><button id="bt55" >123456789</button></td>
+                    <td class="f5, c6"><button id="bt56" >123456789</button></td>
+                    <td class="f5, c7"><button id="bt57" >123456789</button></td>
+                    <td class="f5, c8"><button id="bt58" >123456789</button></td>
+                </tr>
+                <tr class="f6">   
+                    <td class="f6, c0"><button id="bt60" >123456789</button></td>
+                    <td class="f6, c1"><button id="bt61" >123456789</button></td>
+                    <td class="f6, c2"><button id="bt62" >123456789</button></td>
+                    <td class="f6, c3"><button id="bt63" >123456789</button></td>
+                    <td class="f6, c4"><button id="bt64" >123456789</button></td>
+                    <td class="f6, c5"><button id="bt65" >123456789</button></td>
+                    <td class="f6, c6"><button id="bt66" >123456789</button></td>
+                    <td class="f6, c7"><button id="bt67" >123456789</button></td>
+                    <td class="f6, c8"><button id="bt68" >123456789</button></td>
+                </tr>
+                <tr class="f7">   
+                    <td class="f7, c0"><button id="bt70" >123456789</button></td>
+                    <td class="f7, c1"><button id="bt71" >123456789</button></td>
+                    <td class="f7, c2"><button id="bt72" >123456789</button></td>
+                    <td class="f7, c3"><button id="bt73" >123456789</button></td>
+                    <td class="f7, c4"><button id="bt74" >123456789</button></td>
+                    <td class="f7, c5"><button id="bt75" >123456789</button></td>
+                    <td class="f7, c6"><button id="bt76" >123456789</button></td>
+                    <td class="f7, c7"><button id="bt77" >123456789</button></td>
+                    <td class="f7, c8"><button id="bt78" >123456789</button></td>
+                </tr>
+                <tr class="f8">   
+                    <td class="f8, c0"><button id="bt80" >123456789</button></td>
+                    <td class="f8, c1"><button id="bt81" >123456789</button></td>
+                    <td class="f8, c2"><button id="bt82" >123456789</button></td>
+                    <td class="f8, c3"><button id="bt83" >123456789</button></td>
+                    <td class="f8, c4"><button id="bt84" >123456789</button></td>
+                    <td class="f8, c5"><button id="bt85" >123456789</button></td>
+                    <td class="f8, c6"><button id="bt86" >123456789</button></td>
+                    <td class="f8, c7"><button id="bt87" >123456789</button></td>
+                    <td class="f8, c8"><button id="bt88" >123456789</button></td>
+                </tr>
+            </table>
+        </div>
+        <hr size="3" color="darkgrey" />  <!-- línia horitzontal de separació -->
+        <div id="xifres">            
+            <button id="bt0">1</button>
+            <button id="bt1">2</button>
+            <button id="bt2">3</button>
+            <button id="bt3">4</button>
+            <button id="bt4">5</button>
+            <button id="bt5">6</button>
+            <button id="bt6">7</button>
+            <button id="bt7">8</button>
+            <button id="bt8">9</button>
+        </div>    
+        <audio id="audi" src="mp3/final.mp3"></audio>   <!-- música final de partida -->
+    </main>
+</body>
+</html>

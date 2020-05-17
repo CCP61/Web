@@ -1,0 +1,68 @@
+/*       CSS de SOLDOKU */
+
+* {box-sizing: border-box;}		/* la mida de tots els elements és inclouent les vores */
+
+/* incloure sempre aquesta instrucció per poder ajustar text a la mida de la pantalla */
+body {
+	font-size: 100%;
+	font-family: verdana;
+}
+
+header {text-align: center;}
+
+#boton1{
+	padding:9px 13px;			/* espai interior */
+	border:none;				/* sense línia de vora */
+	border-radius:0 7px 7px 0;	/* vores arrodonides a la dreta */
+	margin: 5px;
+	font-size:0.8em;
+	background-color:orange;
+}
+#accions {
+	display: flex;
+	justify-content: center;
+}
+#accions button{
+	margin: 15px;
+}
+#sudoku {
+	display: flex;
+	justify-content: center;
+}
+
+table {
+	border: 3px solid black;
+	border-collapse: collapse;
+	padding: 0px;
+	text-align: center;
+} 
+
+td {
+	border: 1px solid blue;
+}
+
+td button{
+	border: 0px;
+	width: 75px;
+	padding: 5px;
+}
+
+.f3, .f6 {border-top: 3px solid black;}		/* requadre més gruixut cada 3 files */
+.c3, .c6 {border-left: 3px solid black;}	/* requadre més gruixut cada 3 columnes */
+
+#xifres {
+	text-align: center;
+}
+
+#xifres button{
+	color: red;
+	background-color: blue;
+	font-weight: bold;
+	font-size: 30px;
+	margin: 5px;
+	border: 1px solid black;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	justify-content: center;
+}
